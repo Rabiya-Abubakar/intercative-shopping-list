@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #808080, #a18668);
+}
+
+.container {
+    position: relative;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container .box {
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 15px 15px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.container .box h2 {
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.container .box form {
+    display: flex;
+    align-items: center;
+}
+
+.container .box input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #333;
+    outline: none;
+}
+
+.container .box button {
+    background: orangered;
+    color: white;
+    min-width: 100px;
+    font-weight: 500;
+    border: 1px solid #333;
+    cursor: pointer;
+    outline: none;
+    margin-left: 10px;
+}
+
+.container ol {
+    padding: 10px 20px;
+    min-height: 380px;
+    background: #fff repeating-linear-gradient(45deg, transparent 0%, transparent 99%, #000 99%, #000 100%);
+    background-size: 50px 50px;
+    box-shadow: 15px 15px rgba(0,0,0,0.1);
+}
+
+.container ol li {
+    position: relative;
+    font-size: 1.5em;
+    min-height: 50px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.container ol li .remove {
+    margin-left: auto; /* Push remove button to the right */
+    width: 25px;
+    height: 25px;
+    background: url(minus.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.container ol li .done p {
+    text-decoration: line-through;
+    color: rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+.container ol li .done p::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    width: 25px;
+    height: 25px;
+    background: url(done.png);
+    background-size: cover;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.container ol li .tick {
+    margin-right: 10px; /* Spacing between tick and text */
+    font-size: 1.2em;
+    color: green;
+    display: none; /* Hide by default */
+}
+.container ol li.selected .tick {
+    display: inline-block; /* Display if selected */
+}
