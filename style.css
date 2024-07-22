@@ -80,7 +80,6 @@ body {
     margin-left: auto; /* Push remove button to the right */
     width: 25px;
     height: 25px;
-    background: url(minus.jpg);
     background-size: cover;
     border-radius: 50%;
     cursor: pointer;
